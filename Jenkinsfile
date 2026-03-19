@@ -20,11 +20,5 @@ pipeline {
                 bat 'mvnw package'
             }
         }
-
-        stage('Run') {
-            steps {
-                bat 'java -jar target\\jenkinsDemo-0.0.1-SNAPSHOT.jar'
-            }
-        }
     }
 }
