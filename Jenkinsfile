@@ -2,9 +2,28 @@ pipeline {
     agent any
 
     stages {
+
         stage('Build') {
             steps {
-                bat 'mvnw.cmd clean package'
+                bat 'mvnw clean compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                bat 'mvnw test'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                bat 'mvnw package'
+            }
+        }
+
+        stage('Run') {
+            steps {
+                bat 'java -jar target/*.jar'
             }
         }
     }
