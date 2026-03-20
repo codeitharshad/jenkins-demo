@@ -24,7 +24,7 @@ public class JenkinsDemoApplication implements CommandLineRunner {
 
 		@GetMapping("/")
 		public String hello() {
-			return "Hello from Jenkins!";
+			return "Hello from Jenkins!!";
 		}
 	}
 }
